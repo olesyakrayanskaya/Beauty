@@ -26,8 +26,8 @@
         margin-top: 15px;
 
         @media (max-width: 560px) {
-            width: 80vw;  
-            height: auto;                                  
+            width: 80vw;
+            height: auto;
         }
     }
 
@@ -67,7 +67,7 @@
         cursor: pointer;
         padding: 0 10px;
         margin-top: 25px;
-        transition: all 0.7s ease-in;
+        transition: background-color 0.7s ease-in;
 
         &:hover,
         &:focus {
