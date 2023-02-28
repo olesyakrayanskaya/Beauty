@@ -1,2 +1,32 @@
-@use '../base/variables';
-@use '../base/extends';
+@use "../base/variables";
+@use "../base/extends";
+
+.menu {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+    &__list {
+        width: 675px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 600px) {
+            justify-content: center;            
+        }
+    }
+
+    &__item {
+        margin: 10px;
+    }
+
+    &__link {
+        @extend %menu-text;
+        @extend %link-hover;        
+    }
+}

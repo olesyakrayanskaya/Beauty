@@ -1,2 +1,26 @@
 @use '../base/variables';
 @use '../base/extends';
+
+.header {
+
+    background-color: variables.$white;
+
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+
+        @media (max-width: 670px) {
+            justify-content: center;            
+        }
+    }
+
+    &__menu {
+        padding: 20px 0;
+        border-top: 1px solid variables.$grey;
+    }
+
+}

@@ -1,2 +1,30 @@
 @use '../base/variables';
 @use '../base/extends';
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 340px;
+
+    @media (max-width: 365px) {
+        justify-content: center; 
+        margin-bottom: 10px;           
+    }
+
+    &__tel {
+        @extend %menu-text;
+
+        &:hover {
+            color: variables.$link-hover;
+            font-weight: 600;
+        }
+
+        @media (max-width: 365px) {
+            margin: 20px 0;
+        }
+    
+    }
+}

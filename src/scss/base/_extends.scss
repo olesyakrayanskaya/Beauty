@@ -23,7 +23,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 18.75px;
     color: variables.$black;
 }
 
@@ -56,12 +56,11 @@
 }
 
 %btn-text-white {
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    text-align: center;
     letter-spacing: 0.05em;
     color: variables.$white;
 }
@@ -69,4 +68,11 @@
 %btn-text-black {
     @extend %sm-menu-text;
     color: variables.$black;
+}
+
+%link-hover {
+    &:hover {
+        color: variables.$link-hover;
+        text-decoration: underline;
+    }
 }

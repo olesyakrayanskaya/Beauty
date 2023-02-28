@@ -1,2 +1,36 @@
-@use '../base/variables';
-@use '../base/extends';
+@use "../base/variables";
+@use "../base/extends";
+
+.btn {
+    width: 170px;
+    height: 40px;
+    padding: 3px 6px;
+    border-radius: 40px;
+    border: 2px solid variables.$green;
+    background-color: variables.$white;
+    cursor: pointer;
+    @extend %btn-text-black;
+    transition: all 0.7s ease-in-out;
+
+    &:hover {
+        border: 2px solid variables.$link-hover;
+        background-color: variables.$link-hover;
+        color: variables.$white;
+    }
+
+    &_sm {
+        width: 130px;
+        height: 35px;
+        padding: 3px 6px;
+        border-radius: 30px;
+        border: none;
+        background-color: variables.$green;
+        @extend %btn-text-white;
+        color: variables.$white;
+
+        &:hover {
+            border: none;
+            background-color: variables.$link-hover;
+        }
+    }
+}
