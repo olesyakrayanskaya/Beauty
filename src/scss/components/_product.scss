@@ -1,2 +1,36 @@
-@use '../base/variables';
-@use '../base/extends';
+@use "../base/variables";
+@use "../base/extends";
+
+.product {
+    background-color: variables.$white;
+    width: 255px;
+    height: 363px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 30px;
+
+    &__img {
+        width: 125px;
+        height: 166px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__description {
+        @extend %paragraph-text;
+        text-align: center;
+    }
+
+    &__price {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: variables.$black;
+    }
+}
