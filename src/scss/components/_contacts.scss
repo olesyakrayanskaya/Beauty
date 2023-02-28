@@ -25,9 +25,19 @@
         width: 236px;
     }
 
+    &__icon:hover {
+        transform: scale(1.2);
+        filter: opacity(0.8);
+        transition: all 0.7s linear;
+    }
+
     &__adresse {
         @extend %sm-menu-text;
         color: variables.$black;
         margin: 15px 40px;
+
+        &:hover {
+            @extend %link-hover;
+        }
     }
 }
