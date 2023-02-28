@@ -1,2 +1,33 @@
-@use '../base/variables';
-@use '../base/extends';
+@use "../base/variables";
+@use "../base/extends";
+
+.contacts {
+    background-color: variables.$white;
+    padding: 38px 0;
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 950px) {
+            justify-content: center;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 236px;
+    }
+
+    &__adresse {
+        @extend %sm-menu-text;
+        color: variables.$black;
+        margin: 15px 40px;
+    }
+}
