@@ -1,6 +1,25 @@
-@use '../base/variables';
-@use '../base/extends';
+@use "../base/variables";
+@use "../base/extends";
 
 .footer {
-    
+    background-color: variables.$grey;
+    padding: 25px 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #828282;
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        @extend %link-hover;
+    }
 }
