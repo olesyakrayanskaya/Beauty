@@ -1,2 +1,59 @@
-@use '../base/variables';
-@use '../base/extends';
+@use "../base/variables";
+@use "../base/extends";
+
+.banner {
+    background-image: url("images/banner.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 604px;
+
+    &__inner {
+        max-width: 1170px;
+        padding: 0 30px;
+        margin: auto;
+        height: 100%;
+        position: relative;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: absolute;
+        left: 30px;
+        top: 160px;
+    }
+
+    &__title {
+        @extend %h1-text;
+    }
+
+    &__text {
+        width: 308px;
+        @extend %paragraph-text-white;
+        margin-top: 5px;
+    }
+
+    &__link {
+        @extend %btn-text-white;
+        width: 170px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: variables.$green;
+        border: 2px solid variables.$white;
+        margin-top: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.7s ease-in-out;
+
+        &:hover {
+            border: 2px solid variables.$link-hover;
+            background-color: variables.$link-hover;
+            color: variables.$white;
+        }
+    }
+}
