@@ -1,2 +1,72 @@
-@use './variables';
+@use "./variables";
 
+%h1-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: variables.$white;
+}
+
+%h2-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: variables.$black;
+}
+
+%menu-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: variables.$black;
+}
+
+%sm-menu-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: variables.$dark;
+}
+
+%paragraph-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: variables.$dark;
+}
+
+%paragraph-text-white {
+    @extend %paragraph-text;
+    color: variables.$white;
+}
+
+%placeholder-text {
+    @extend %sm-menu-text;
+    color: variables.$grey;
+}
+
+%btn-text-white {
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: variables.$white;
+}
+
+%btn-text-black {
+    @extend %sm-menu-text;
+    color: variables.$black;
+}
