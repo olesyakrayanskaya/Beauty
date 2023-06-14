@@ -1,0 +1,64 @@
+@use "../base/variables";
+@use "../base/extends";
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(variables.$black, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    &__window {
+        background-color: variables.$grey;
+        border-radius: 5%;
+        width: 25%;
+        height: 30%;
+        position: absolute;
+        top: 40px;
+        right: 100px;
+        padding: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @extend %menu-text;
+        text-align: left;
+        width: 85%;
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    &__fieldset {
+        @extend .modal__form;
+        padding: 10px;
+        width: 90%;
+        border: none;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+        border: none;
+        padding: 10px;
+    }
+
+    input::placeholder {
+        @extend %placeholder-text;
+    }
+}
