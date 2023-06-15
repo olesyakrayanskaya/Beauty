@@ -10,6 +10,18 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10px 30px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.4s ease-in-out, transform 0.3s linear;
+
+    &_animated {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &_animated:nth-child(even) {
+        transition-delay: 0.3s;
+    }
 
     &__img {
         width: 125px;

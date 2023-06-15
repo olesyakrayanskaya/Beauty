@@ -25,9 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset;
         const windowHeight = document.documentElement.clientHeight;
-        const shift = scrollTop;
         if (scrollTop >= (windowHeight / 3)) {
-            modal.style.transform = `translateY(${shift}px)`;
+            modal.style.transform = `translateY(${scrollTop}px)`;
         } else { modal.style.transform = 'translateY(0)'; }
     });
 });
