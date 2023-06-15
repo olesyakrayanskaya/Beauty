@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
     padding: 6px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
 
     &__list {
         display: flex;
